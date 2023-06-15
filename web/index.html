@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <style>
+            html{
+                font-family: 'Roboto', Arial;
+                background-color: darkslategray;
+                color: lightgray;
+            }
+        </style>
+        <script src="test.js"></script>
+    </head>
+    <main>
+        <h1>
+            Local YouTube Downloader
+        </h1>
+        <p>
+            This is pretty basic, but so far you can paste a youtube link and it'll get downloaded <br>
+            to /downloads. Next up is a settings UI and being able to change the download location, <br>
+            among other things.
+        </p>
+
+        <div style="display: flex;">
+            <p style="padding-right: 5px;">Video URL:</p>
+            <p id="video-url" contenteditable="True" style="color: black; background-color:lightslategray; width:500px; display: inline-block; border-radius: 3px;"></p>
+        </div>
+
+        <button onclick="TestButton();">Download Video to /downloads</button>
+    </main>
+</html>
