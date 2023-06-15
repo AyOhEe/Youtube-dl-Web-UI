@@ -70,7 +70,7 @@ def server_target(address:str="127.0.0.1", port:int=8000):
     exited_thread = True
     print("<Server> Exited cleanly.")
 
-def start_server(address:str="127.0.0.1", port:int=8000, *args,**kwargs):
-    server_thread = threading.Thread(target=server_target, args=[address, port, *args], kwargs=kwargs)
+def start_server(address:str="127.0.0.1", port:int=8000):
+    server_thread = threading.Thread(target=server_target, args=[address, port])
     server_thread.start()
     return server_thread
