@@ -2,6 +2,7 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 import threading
 import json
 import time
+import urllib
 
 import handler
 
@@ -10,11 +11,20 @@ exited_thread = False
 
 
 #NOTE must be called from a thread that isn't server_target
-def shutdown():
+def shutdown(ADDRESS, PORT):
     global exit_thread
 
 
     exit_thread = True
+
+    #TODO this is dumb and will probably break eventually
+    #the server sometimes doesn't exit until it recieves a request.
+    #this is a hilariously bad solution, but whatever for now i guess.
+    
+    try: 
+        urllib.requests.urlopen(f"{ADDRESS}:{PORT}")
+    except Exception:
+        pass #anything that fails here can be safely ignored.
 
 
 class YDLHTTPRequestHandler(SimpleHTTPRequestHandler):

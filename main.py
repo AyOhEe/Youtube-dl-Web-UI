@@ -28,7 +28,7 @@ def main():
     start_server(ADDRESS, PORT)
     start_handler()
 
-    time.sleep(1)
+    time.sleep(2)
 
     #TODO maybe have the auto open be a setting, and then have a settings.json which can be
     #     edited in the web ui?
@@ -43,7 +43,7 @@ def main():
 
     print("\n\nWaiting for threads to exit...")
 
-    server.shutdown()
+    server.shutdown(ADDRESS, PORT)
     handler.shutdown()
 
 
