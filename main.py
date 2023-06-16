@@ -19,6 +19,8 @@ ADDRESS = "127.0.0.128"
 # - exception handling
 # - checking to make sure an instance isn't already up, and if so, just opening the webpage.
 #   could use a file in the working directory?
+# - try/except in the handler thread so it doesn't die when a bad link is passed
+# - file type selector
 
 def main():
     import os
