@@ -1,16 +1,15 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <style>
-            html{
-                font-family: 'Roboto', Arial;
-                background-color: darkslategray;
-                color: lightgray;
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css">
         <script src="test.js"></script>
     </head>
-    <main>
+    <body>
+        <nav id="sidebar">
+            <div class="sidebar-element">Youtube</div>
+            <div class="sidebar-element">Spotify</div>
+            <div class="sidebar-element">Soundcloud</div>
+        </nav>
         <h1>
             Local YouTube Downloader
         </h1>
@@ -22,9 +21,9 @@
 
         <div style="display: flex;">
             <p style="padding-right: 5px;">Video URL:</p>
-            <p id="video-url" contenteditable="True" style="color: black; background-color:lightslategray; width:500px; display: inline-block; border-radius: 3px;"></p>
+            <p id="video-url" contenteditable="True"></p>
         </div>
 
         <button onclick="TestButton();">Download Video to /downloads</button>
-    </main>
+    </body>
 </html>

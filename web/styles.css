@@ -1,0 +1,45 @@
+html{
+    font-family: 'Roboto', Arial;
+    background-color: darkslategray;
+    color: lightgray;
+}
+
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+p#video-url{
+    color: black; 
+    background-color:lightslategray; 
+    width:500px; 
+    display: inline-block; 
+    border-radius: 3px;
+}
+
+#sidebar{
+    background-color: #888888;
+    height: 100%;
+    width: 230px;
+    float:left;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    box-sizing: border-box;
+
+    padding: 0.5rem;
+    border: 0;
+    margin: 0;
+    margin-right: 0.5rem;
+}
+
+.sidebar-element{
+    height: 30px;
+    width: 100%px;
+    color: lightgray;
+    background-color: #555575;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 6px;
+}
